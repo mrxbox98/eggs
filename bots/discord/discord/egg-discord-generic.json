@@ -90,7 +90,7 @@
         },
         {
             "name": "Additional Node packages",
-            "description": "Install additional node packages.\r\n\r\nUse spaces to separate.",
+            "description": "Install additional node packages.\r\n\r\nUse spaces to separate. (Only for js)",
             "env_variable": "NODE_PACKAGES",
             "default_value": "",
             "user_viewable": true,
@@ -99,7 +99,7 @@
         },
         {
             "name": "Uninstall Node packages",
-            "description": "Uninstall node packages.\r\n\r\nUse spaces to separate.",
+            "description": "Uninstall node packages.\r\n\r\nUse spaces to separate. (Only for js)",
             "env_variable": "UNNODE_PACKAGES",
             "default_value": "",
             "user_viewable": true,
@@ -132,6 +132,15 @@
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|string"
+        },
+        {
+            "name": "Additional Python packages",
+            "description": "Install additional python packages.\r\n\r\nUse spaces to separate (Only for python)",
+            "env_variable": "PY_PACKAGES",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
         }
     ]
 }
