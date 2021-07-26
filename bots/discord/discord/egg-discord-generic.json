@@ -141,6 +141,15 @@
             "user_viewable": true,
             "user_editable": true,
             "rules": "nullable|string"
+        },
+        {
+            "name": "Requirements file",
+            "description": "if there are other requirements files to choose from. (Only for python)",
+            "env_variable": "REQUIREMENTS_FILE",
+            "default_value": "requirements.txt",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string"
         }
     ]
 }
