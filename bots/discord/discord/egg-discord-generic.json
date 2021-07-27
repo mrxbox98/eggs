@@ -7,7 +7,7 @@
     "exported_at": "2021-06-30T14:47:33+03:00",
     "name": "discord generic",
     "author": "parker@parkervcp.com",
-    "description": "A generic Discord bot\r\n\r\nMake sure to ",
+    "description": "A generic Discord bot\r\n\r\nMake sure to pick the correct image",
     "features": null,
     "images": [
         "ghcr.io/pterodactyl/yolks:go_1.14",
@@ -28,7 +28,7 @@
         "ghcr.io/pterodactyl/yolks:python_3.9"
     ],
     "file_denylist": [],
-    "startup": "if [[ -d .git ]] && [[ {{AUTO_UPDATE}} == \"1\" ]]; then git pull; fi; if [[ ! -z ${NODE_PACKAGES} ]]; then \/usr\/local\/bin\/npm install ${NODE_PACKAGES}; fi; if [[ ! -z ${UNNODE_PACKAGES} ]]; then \/usr\/local\/bin\/npm uninstall ${UNNODE_PACKAGES}; fi; if [ -f \/home\/container\/package.json ]; then \/usr\/local\/bin\/npm install; fi; \/usr\/local\/bin\/node \/home\/container\/{{BOT_FILE}}",
+    "startup": "if [[ -d .git ]] && [[ {{AUTO_UPDATE}} == \"1\" ]]; then git pull; fi; if [[ ! -z ${NODE_PACKAGES} ]]; then \/usr\/local\/bin\/npm install ${NODE_PACKAGES}; fi; if [[ ! -z ${UNNODE_PACKAGES} ]]; then \/usr\/local\/bin\/npm uninstall ${UNNODE_PACKAGES}; fi; if [ -f \/home\/container\/package.json ]; then \/usr\/local\/bin\/npm install; fi; \/usr\/local\/bin\/node \/home\/container\/{{BOT_FILE}} if [[ {{DISCORD_TYPE}} == \"Discord Py\" ]]; then if [[ -d .git ]] && [[ {{AUTO_UPDATE}} == \\\"1\\\" ]]; then git pull; fi; if [[ ! -z {{PY_PACKAGES}} ]]; then pip install -U --target .local\\/lib\\/python3.8\\/site-packages {{PY_PACKAGES}}; fi; if [[ -f \\/home\\/container\\/${REQUIREMENTS_FILE} ]]; then pip install -U --target .local\\/lib\\/python3.8\\/site-packages -r ${REQUIREMENTS_FILE}; fi; \\/usr\\/local\\/bin\\/python \\/home\\/container\\/{{BOT_FILE}};",
     "config": {
         "files": "{}",
         "startup": "{\r\n    \"done\": \"change this part\"\r\n}",
